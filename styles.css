@@ -15,7 +15,10 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 5px 5px lightblue;
+    border-color: lightblue;
+    border: 1px trasparent;
+    box-shadow: 1px 1px 1px 1px;
+    
 }
 
 header h1 {
@@ -41,7 +44,7 @@ section {
     padding: 20px;
     margin: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 19px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -91,4 +94,8 @@ footer {
     position: bottom;
     width: 100%;
     bottom: 0;
+}
+.footer_img{
+    max-height: 69px;
+    padding-top: 30px;
 }
