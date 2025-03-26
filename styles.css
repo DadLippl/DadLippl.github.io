@@ -2,18 +2,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FF8F29;
+  
 }
-
+.white_header{
+    max-height: 69px;
+    padding-bottom: 30px;
+   
+}
 header {
-    background-color: #333;
+    background-color: #1E4488;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    box-shadow: 5px 5px lightblue;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0; 
 }
 
 nav ul {
@@ -41,11 +47,16 @@ section {
 
 section h2 {
     margin-top: 0;
+    
 }
-
+a:hover{
+    color: #FFCf00;
+    text-shadow: 1px 1px #EAAB00;
+}
 form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 5px;
 }
 
 form label {
@@ -75,9 +86,9 @@ form button:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #1E4488;
     color: #fff;
-    position: fixed;
+    position: bottom;
     width: 100%;
     bottom: 0;
 }
