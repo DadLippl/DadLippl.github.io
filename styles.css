@@ -11,15 +11,14 @@ body {
    
 }
 header {
-    background-color: #1E4488;
+    background: rgb(73,108,172);
+    background: radial-gradient(circle, rgba(73,108,172,1) 0%, rgba(42,42,160,1) 37%, rgba(0,0,0,1) 100%);
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    border-color: lightblue;
-    border: 1px trasparent;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: inset 0 0 3;
     
-}
+}   
 
 header h1 {
     margin: 0; 
@@ -43,7 +42,8 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #fff;
+    background: rgb(242,236,222);
+    background: linear-gradient(0deg, rgba(242,236,222,1) 0%, rgba(255,255,255,1) 100%);
     border-radius: 19px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -89,7 +89,8 @@ form button:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #1E4488;
+    background: rgb(73,108,172);
+background: radial-gradient(circle, rgba(73,108,172,1) 0%, rgba(42,42,160,1) 37%, rgba(0,0,0,1) 100%);
     color: #fff;
     position: bottom;
     width: 100%;
