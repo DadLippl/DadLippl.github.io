@@ -52,6 +52,9 @@ section h2 {
     margin-top: 0;
     
 }
+.li.img{
+    width: 65px;
+}
 a:hover{
     color: #FFCf00;
     text-shadow: 1px 1px #EAAB00;
