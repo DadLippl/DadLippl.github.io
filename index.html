@@ -4,235 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vancouver DeMolay Chapter</title>
-  <link rel="icon" href="logo/favicon.ico" type="image/x-icon" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0 auto;
-      padding: 0 15px;
-      background-color: #f2f2f2;
-      max-width: 1000px;
-      overflow-x: hidden;
-    }
-
-    h1, h2 {
-      font-family: 'Bebas Neue', sans-serif;
-    }
-
-    /* === HERO IMAGE HEADER === */
-    .hero-image-only {
-  width: 100%;
-  margin: 0 auto;
-  background-color: black; /* fallback background */
-  padding: 0;
-    }
-
-    .hero-banner {
-  width: 100%;
-  height: auto;
-  display: block;
-    }
-
-    /* === NAVIGATION === */
-    nav ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-      margin: 20px 0 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 12px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #002b7f;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #f2a900;
-      text-shadow: 1px 1px #eaab00;
-    }
-
-    /* === SECTIONS === */
-    section {
-      background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
-      margin: 40px 0;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-    }
-
-    section h2 {
-      text-align: center;
-      margin-top: 0;
-    }
-
-    /* === EVENT GALLERY === */
-    .event-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-
-    .event-gallery img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .event-gallery img:hover {
-      transform: scale(1.03);
-    }
-
-    /* === CONTACT FORM === */
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    form label {
-      margin: 10px 0 5px;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    button {
-      background-color: #002b7f;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 10px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #d5282e;
-    }
-
-    /* === FOOTER === */
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-      color: #fff;
-    }
-
-    .footer_img {
-      max-height: 69px;
-      margin-top: 15px;
-    }
-
-    /* === MOBILE === */
-    @media (max-width: 600px) {
-      .hero-banner {
-        max-width: 90%;
-      }
-
-      nav ul li {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .event-gallery {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
-  <!-- Static Image Header -->
+  <!-- Sticky Top Navigation -->
+  <nav class="top-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="road.html">The Road Begins</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="activities.html">Recent Activities</a></li>
+      <li><a href="connect.html">Get Connected</a></li>
+      <li><a href="join.html">How to Join</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Banner -->
   <header class="hero-image-only">
     <img src="logo/Vancouver%20Chapter%20(6).png" alt="Vancouver DeMolay Chapter Banner" class="hero-banner" />
   </header>
 
-  <!-- Navigation -->
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+  <!-- Intro Section -->
+  <section class="intro">
+    <h2>Welcome to Vancouver DeMolay</h2>
+    <p>
+      We're a chapter of young men building leadership, character, and lifelong friendships through service, mentorship, and tradition. Whether you're looking to grow personally or make an impact in your community, DeMolay is where the road begins.
+    </p>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <ul class="event-gallery">
+      <li><img src="event_photos/drewinstall.png" alt="Drew Installation Event" /></li>
+      <li><img src="https://placehold.co/600x400?text=Event+Placeholder" alt="Upcoming Event" /></li>
+      <li><img src="https://placehold.co/600x400/000000/FFF?text=Placeholder" alt="Upcoming Event" /></li>
     </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>About Us</h2>
-      <p>The Vancouver DeMolay Chapter is dedicated to developing young men into leaders of character. Our mission is to provide a safe and supportive environment where members can grow and thrive.</p>
-    </section>
-
-    <section id="events" data-aos="fade-up" data-aos-delay="100">
-      <h2>Upcoming Events</h2>
-      <ul class="event-gallery">
-        <li><img src="event_photos/drewinstall.png" alt="Drew Installation Event" /></li>
-        <li><img src="https://placehold.co/600x400?text=Event+Placeholder" alt="Upcoming Event" /></li>
-        <li><img src="https://placehold.co/600x400/000000/FFF?text=Placeholder" alt="Upcoming Event" /></li>
-      </ul>
-    </section>
-
-    <section id="contact" data-aos="fade-up" data-aos-delay="200">
-      <h2>Contact Us</h2>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Be@DeMolay.com" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="gray-footer">
     <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
     <a href="https://www.wademolay.org/">
       <img class="footer_img" src="logo/Logo_DeMolay Washington Trademark.png" alt="Washington DeMolay Logo" />
     </a>
   </footer>
-
-  <!-- AOS Scroll Animations -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
 </html>
