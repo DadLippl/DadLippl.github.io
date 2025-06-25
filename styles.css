@@ -16,61 +16,73 @@ h1, h2 {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* === HEADER === */
+/* === NAVIGATION BAR === */
+.top-nav {
+  background-color: #d5282e; /* DeMolay red */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.top-nav li {
+  margin-left: 20px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: #ffd700; /* Yellow */
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.top-nav a:hover {
+  background-color: #2a2aa0; /* DeMolay Blue */
+  color: white;
+}
+
+/* === HEADER IMAGE === */
 .hero-image-only {
-  text-align: center;
-  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-  padding: 40px 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: black; /* fallback background */
+  padding: 0;
 }
 
 .hero-banner {
-  max-width: 300px;
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
-/* === NAVIGATION === */
-nav ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  margin: 20px 0 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 12px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #002b7f;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #f2a900;
-  text-shadow: 1px 1px #eaab00;
-}
-
-/* === SECTIONS === */
-section {
-  background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
-  margin: 40px 0;
-  padding: 20px;
+/* === INTRO SECTION === */
+.intro {
+  background: #ffffff;
+  padding: 30px 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
   text-align: center;
-  margin-top: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-top: 40px;
 }
 
 /* === EVENT GALLERY === */
+#events {
+  margin-top: 40px;
+}
+
 .event-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -92,63 +104,32 @@ section h2 {
   transform: scale(1.03);
 }
 
-/* === CONTACT FORM === */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin: 10px 0 5px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-button {
-  background-color: #002b7f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #d5282e;
-}
-
 /* === FOOTER === */
-footer {
+.gray-footer {
   text-align: center;
   padding: 30px 10px;
-  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-  color: #fff;
+  background-color: #e0e0e0; /* DeMolay light gray */
+  color: #333;
 }
 
-.footer_img {
+.gray-footer .footer_img {
   max-height: 69px;
   margin-top: 15px;
 }
 
 /* === MOBILE === */
 @media (max-width: 600px) {
-  .hero-banner {
-    max-width: 90%;
+  .top-nav ul {
+    flex-direction: column;
+    align-items: flex-end;
   }
 
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  .top-nav li {
+    margin: 5px 0;
+  }
+
+  .hero-banner {
+    max-width: 100%;
   }
 
   .event-gallery {
