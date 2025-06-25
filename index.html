@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vancouver DeMolay Chapter</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vancouver DeMolay Chapter</title>
+  <link rel="icon" href="logo/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header><img class= "white_header" src="logo/White.png">
-        <h1>Welcome to the Local DeMolay Chapter</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <header>
+    <img class="white_header" src="logo/White.png" alt="Vancouver DeMolay Logo" />
+    <h1>Welcome to the Vancouver DeMolay Chapter</h1>
+    <p class="tagline">Building leaders of character through fellowship, mentorship, and service.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <section id="about">
-        <h2>About Us</h2>
-        <p>The Vancouver DeMolay Chapter is dedicated to developing young men into leaders of character. Our mission is to provide a safe and supportive environment where members can grow and thrive.</p>
+      <h2>About Us</h2>
+      <p>The Vancouver DeMolay Chapter is dedicated to developing young men into leaders of character. Our mission is to provide a safe and supportive environment where members can grow and thrive.</p>
     </section>
+
     <section id="events">
-        <h2>Upcoming Events</h2>
-        <ul>
-            <li><img src="event_photos/drewinstall.png"></li>
-            <li><img src="https://placehold.co/600x400?text=Hello\nWorld"></li>
-            <li><img src="https://placehold.co/600x400/000000/FFF"></li>
-        </ul>
+      <h2>Upcoming Events</h2>
+      <ul class="event-gallery">
+        <li><img src="event_photos/drewinstall.png" alt="Drew Installation Event" /></li>
+        <li><img src="https://placehold.co/600x400?text=Event+Placeholder" alt="Upcoming Event" /></li>
+        <li><img src="https://placehold.co/600x400/000000/FFF?text=Placeholder" alt="Upcoming Event" /></li>
+      </ul>
     </section>
+
     <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name" >Name:</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Be@DeMolay.com"required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Be@DeMolay.com" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
     </section>
-    <footer>
-        <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
-        <a href="https://www.wademolay.org/"><img class="footer_img" src="logo/Logo_DeMolay Washington Trademark.png"></a>
-    </footer>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+    <a href="https://www.wademolay.org/">
+      <img class="footer_img" src="logo/Logo_DeMolay Washington Trademark.png" alt="Washington DeMolay Logo" />
+    </a>
+  </footer>
+
 </body>
 </html>
