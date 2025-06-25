@@ -1,3 +1,25 @@
+.hero-static {
+  text-align: center;
+  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
+  color: white;
+  padding: 60px 20px 40px;
+}
+
+.hero-logo {
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+
+.hero-static h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-static p {
+  font-size: 1.25rem;
+  color: #ffd700;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
