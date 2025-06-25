@@ -30,33 +30,22 @@
       font-family: 'Bebas Neue', sans-serif;
     }
 
-    /* === STATIC HERO SECTION === */
-    .hero-static {
+    /* === HERO IMAGE HEADER === */
+    .hero-image-only {
       text-align: center;
       background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-      color: white;
-      padding: 60px 20px 40px;
+      padding: 40px 0;
     }
 
-    .hero-logo {
+    .hero-banner {
       max-width: 300px;
       width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto;
     }
 
-    .hero-static h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #d5282e;
-    }
-
-    .hero-static p {
-      font-size: 1.25rem;
-      color: #d5282e;
-    }
-
+    /* === NAVIGATION === */
     nav ul {
       list-style: none;
       padding: 0;
@@ -81,6 +70,7 @@
       text-shadow: 1px 1px #eaab00;
     }
 
+    /* === SECTIONS === */
     section {
       background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
       margin: 40px 0;
@@ -94,6 +84,7 @@
       margin-top: 0;
     }
 
+    /* === EVENT GALLERY === */
     .event-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -115,6 +106,7 @@
       transform: scale(1.03);
     }
 
+    /* === CONTACT FORM === */
     form {
       display: flex;
       flex-direction: column;
@@ -149,6 +141,7 @@
       background-color: #d5282e;
     }
 
+    /* === FOOTER === */
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -161,9 +154,10 @@
       margin-top: 15px;
     }
 
+    /* === MOBILE === */
     @media (max-width: 600px) {
-      .hero-static h1 {
-        font-size: 2rem;
+      .hero-banner {
+        max-width: 90%;
       }
 
       nav ul li {
@@ -180,11 +174,9 @@
 </head>
 <body>
 
-  <!-- Static Hero Image Header -->
-  <header class="hero-static">
-    <img src="logo/White.png" alt="Vancouver DeMolay Logo" class="hero-logo" />
-    <h1>Vancouver DeMolay Chapter</h1>
-    <p>Building tomorrow's leaders with honor, service, and brotherhood.</p>
+  <!-- Static Image Header -->
+  <header class="hero-image-only">
+    <img src="logo/Vancouver%20Chapter%20(6).png" alt="Vancouver DeMolay Chapter Banner" class="hero-banner" />
   </header>
 
   <!-- Navigation -->
