@@ -5,27 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vancouver DeMolay Chapter</title>
   <link rel="icon" href="logo/favicon.ico" type="image/x-icon" />
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  
-  <!-- W3CSS -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
 
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Your Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- W3CSS (Optional if you're using any W3 utility classes) -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
 
   <style>
+    /* Base Styles */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      background-color: #f2f2f2;
-      max-width: 1000px;
       margin: 0 auto;
       padding: 0 15px;
+      background-color: #f2f2f2;
+      max-width: 1000px;
+      overflow-x: hidden;
     }
 
     h1, h2 {
@@ -34,35 +36,29 @@
     }
 
     /* Hero Section */
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('logo/White.png') no-repeat center center/contain;
-      background-size: cover;
+    .hero-static {
       text-align: center;
+      background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
       color: white;
-      padding: 100px 20px 60px;
-      animation: fadeInUp 1s ease-out;
+      padding: 60px 20px 40px;
     }
 
-    .hero h1 {
+    .hero-logo {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .hero-static h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
-    .hero p {
+    .hero-static p {
       font-size: 1.25rem;
       color: #ffd700;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     /* Navigation */
@@ -90,6 +86,7 @@
       text-shadow: 1px 1px #eaab00;
     }
 
+    /* Sections */
     section {
       background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
       margin: 40px 0;
@@ -99,10 +96,11 @@
     }
 
     section h2 {
-      margin-top: 0;
       text-align: center;
+      margin-top: 0;
     }
 
+    /* Event Gallery */
     .event-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -124,6 +122,7 @@
       transform: scale(1.03);
     }
 
+    /* Contact Form */
     form {
       display: flex;
       flex-direction: column;
@@ -135,6 +134,7 @@
 
     form input,
     form textarea {
+      width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -157,6 +157,7 @@
       background-color: #d5282e;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -169,31 +170,34 @@
       margin-top: 15px;
     }
 
+    /* Mobile Responsive */
     @media (max-width: 600px) {
+      .hero-static h1 {
+        font-size: 2rem;
+      }
+
       nav ul li {
         display: block;
         margin: 10px 0;
       }
 
-      .hero h1 {
-        font-size: 2rem;
-      }
-
       .event-gallery {
         flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
 
-<header class="hero-static">
-  <img src="logo/White.png" alt="Vancouver DeMolay Logo" class="hero-logo" />
-  <h1>Vancouver DeMolay Chapter</h1>
-  <p>Building tomorrow's leaders with honor, service, and brotherhood.</p>
-</header>
+  <!-- Header / Hero -->
+  <header class="hero-static">
+    <img src="logo/White.png" alt="Vancouver DeMolay Logo" class="hero-logo" />
+    <h1>Vancouver DeMolay Chapter</h1>
+    <p>Building tomorrow's leaders with honor, service, and brotherhood.</p>
+  </header>
 
-
+  <!-- Navigation -->
   <nav aria-label="Main navigation">
     <ul>
       <li><a href="about.html">About Us</a></li>
@@ -202,6 +206,7 @@
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <main>
     <section id="about" data-aos="fade-up">
       <h2>About Us</h2>
@@ -234,6 +239,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
     <a href="https://www.wademolay.org/">
@@ -241,7 +247,7 @@
     </a>
   </footer>
 
-  <!-- AOS Script -->
+  <!-- AOS Scroll Animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
