@@ -1,113 +1,98 @@
-.hero-static {
-  text-align: center;
-  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-  color: white;
-  padding: 60px 20px 40px;
+/* === GLOBAL === */
+* {
+  box-sizing: border-box;
 }
 
-.hero-logo {
-  max-height: 100px;
-  margin-bottom: 20px;
-}
-
-.hero-static h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.hero-static p {
-  font-size: 1.25rem;
-  color: #ffd700;
-}
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-  max-width: 1000px;
+  font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   padding: 0 15px;
+  background-color: #f2f2f2;
+  max-width: 1000px;
+  overflow-x: hidden;
 }
 
-/* Header */
-.white_header {
-  max-height: 69px;
-  padding-bottom: 20px;
+h1, h2 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
-header {
-  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
-  color: #fff;
+/* === HEADER === */
+.hero-image-only {
   text-align: center;
-  padding: 20px 0;
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
+  padding: 40px 0;
 }
 
-header h1 {
-  margin: 10px 0 5px;
+.hero-banner {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.tagline {
-  font-style: italic;
-  margin: 5px 0 15px;
-  color: #ffd700;
-}
-
-/* Navigation */
+/* === NAVIGATION === */
 nav ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  text-align: center;
+  margin: 20px 0 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  display: inline-block;
+  margin: 0 12px;
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  color: #002b7f;
+  transition: color 0.3s;
 }
 
-a:hover {
+nav ul li a:hover {
   color: #f2a900;
   text-shadow: 1px 1px #eaab00;
 }
 
-/* Sections */
+/* === SECTIONS === */
 section {
-  padding: 20px;
-  margin: 20px 0;
   background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
+  margin: 40px 0;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
+  text-align: center;
   margin-top: 0;
 }
 
-/* Event Images */
+/* === EVENT GALLERY === */
 .event-gallery {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
-.event-gallery li img {
+.event-gallery img {
   width: 100%;
   max-width: 300px;
   border-radius: 8px;
+  transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Form */
+.event-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* === CONTACT FORM === */
 form {
   display: flex;
   flex-direction: column;
@@ -117,43 +102,50 @@ form label {
   margin: 10px 0 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-form button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+button {
   background-color: #002b7f;
-  color: #fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
   font-weight: bold;
+  transition: background-color 0.3s;
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #0044cc;
+button:hover {
+  background-color: #d5282e;
 }
 
-/* Footer */
+/* === FOOTER === */
 footer {
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 10px;
   background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
   color: #fff;
 }
 
 .footer_img {
   max-height: 69px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-/* Responsive */
+/* === MOBILE === */
 @media (max-width: 600px) {
+  .hero-banner {
+    max-width: 90%;
+  }
+
   nav ul li {
     display: block;
     margin: 10px 0;
@@ -162,9 +154,5 @@ footer {
   .event-gallery {
     flex-direction: column;
     align-items: center;
-  }
-
-  section {
-    margin: 10px 0;
   }
 }
