@@ -30,46 +30,33 @@
       font-family: 'Bebas Neue', sans-serif;
     }
 
-    /* === HERO VIDEO SECTION === */
-    .video-hero {
-      position: relative;
-      height: 80vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* === STATIC HERO SECTION === */
+    .hero-static {
       text-align: center;
-    }
-
-    .background-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
-
-    .overlay {
-      position: relative;
-      z-index: 2;
+      background: radial-gradient(circle, #496cac 0%, #2a2aa0 37%, #000 100%);
       color: white;
-      padding: 20px;
+      padding: 60px 20px 40px;
     }
 
-    .overlay h1 {
+    .hero-logo {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .hero-static h1 {
       font-size: 3rem;
       margin-bottom: 10px;
       color: #d5282e;
     }
 
-    .overlay p {
+    .hero-static p {
       font-size: 1.25rem;
-      color: #ffd700;
+      color: #d5282e;
     }
 
-    /* === NAVIGATION === */
     nav ul {
       list-style: none;
       padding: 0;
@@ -94,7 +81,6 @@
       text-shadow: 1px 1px #eaab00;
     }
 
-    /* === SECTIONS === */
     section {
       background: linear-gradient(0deg, #f2ecde 0%, #ffffff 100%);
       margin: 40px 0;
@@ -108,7 +94,6 @@
       margin-top: 0;
     }
 
-    /* === EVENT GALLERY === */
     .event-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -130,7 +115,6 @@
       transform: scale(1.03);
     }
 
-    /* === CONTACT FORM === */
     form {
       display: flex;
       flex-direction: column;
@@ -165,7 +149,6 @@
       background-color: #d5282e;
     }
 
-    /* === FOOTER === */
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -178,12 +161,87 @@
       margin-top: 15px;
     }
 
-    /* === MOBILE === */
     @media (max-width: 600px) {
-      .overlay h1 {
+      .hero-static h1 {
         font-size: 2rem;
       }
 
       nav ul li {
         display: block;
         margin: 10px 0;
+      }
+
+      .event-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Static Hero Image Header -->
+  <header class="hero-static">
+    <img src="logo/White.png" alt="Vancouver DeMolay Logo" class="hero-logo" />
+    <h1>Vancouver DeMolay Chapter</h1>
+    <p>Building tomorrow's leaders with honor, service, and brotherhood.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>The Vancouver DeMolay Chapter is dedicated to developing young men into leaders of character. Our mission is to provide a safe and supportive environment where members can grow and thrive.</p>
+    </section>
+
+    <section id="events" data-aos="fade-up" data-aos-delay="100">
+      <h2>Upcoming Events</h2>
+      <ul class="event-gallery">
+        <li><img src="event_photos/drewinstall.png" alt="Drew Installation Event" /></li>
+        <li><img src="https://placehold.co/600x400?text=Event+Placeholder" alt="Upcoming Event" /></li>
+        <li><img src="https://placehold.co/600x400/000000/FFF?text=Placeholder" alt="Upcoming Event" /></li>
+      </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up" data-aos-delay="200">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Be@DeMolay.com" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+    <a href="https://www.wademolay.org/">
+      <img class="footer_img" src="logo/Logo_DeMolay Washington Trademark.png" alt="Washington DeMolay Logo" />
+    </a>
+  </footer>
+
+  <!-- AOS Scroll Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
