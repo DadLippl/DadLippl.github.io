@@ -12,13 +12,16 @@
 
   <!-- Navigation -->
   <nav class="top-nav" aria-label="Main navigation">
-    <ul>
-      <li><a href="road.html">The Road Begins</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="activities.html">Recent Activities</a></li>
-      <li><a href="connect.html">Get Connected</a></li>
-      <li><a href="join.html">How to Join</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="road.html">The Road Begins</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="activities.html">Recent Activities</a></li>
+        <li><a href="connect.html">Get Connected</a></li>
+        <li><a href="join.html">How to Join</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Header Image -->
@@ -64,6 +67,14 @@
   <footer class="footer">
     <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
   </footer>
+
+  <!-- Simple Script for Hamburger Toggle -->
+  <script>
+    document.getElementById("mobile-menu").addEventListener("click", function () {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
