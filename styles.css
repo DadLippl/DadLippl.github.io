@@ -95,12 +95,15 @@ h1, h2, h3 {
 
 /* Header Image */
 .header-image img {
-  width: 100%;
-  max-height: 300px;
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto;
 }
+
 
 /* Welcome Section */
 .welcome-section {
