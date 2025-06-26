@@ -63,7 +63,7 @@ h1, h2, h3 {
 /* Mobile Nav */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     background-color: #b30838;
     width: 100%;
@@ -71,7 +71,7 @@ h1, h2, h3 {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
 
   .menu-toggle {
@@ -84,14 +84,16 @@ h1, h2, h3 {
   }
 }
 
+
 /* Header Image */
 .header-image img {
+  max-width: 900px;
   width: 100%;
-  max-height: 300px;
-  object-fit: contain;
+  height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
+
 
 /* Welcome Section */
 .welcome-section {
