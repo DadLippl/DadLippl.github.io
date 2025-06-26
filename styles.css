@@ -1,146 +1,141 @@
-/* === GLOBAL === */
-* {
-  box-sizing: border-box;
-}
-
+/* Base styles */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  padding: 0 15px;
-  background-color: #f2f2f2;
-  max-width: 1000px;
-  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #333;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
 }
 
-/* === NAVIGATION BAR === */
+/* Sticky Top Navigation */
 .top-nav {
-  background-color: #d5282e; /* DeMolay red */
-  padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
-}
-.page-content {
-  margin-top: 40px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  background-color: #b30838; /* DeMolay Red */
+  z-index: 999;
+  padding: 10px 0;
+  text-align: right;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .top-nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  padding: 0 30px;
+  display: inline-flex;
+  gap: 20px;
 }
 
-.top-nav li {
-  margin-left: 20px;
-}
-
-.top-nav a {
+.top-nav ul li a {
+  color: #f9d423; /* Yellow text */
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.1rem;
-  color: #ffd700; /* Yellow */
   padding: 8px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.top-nav a:hover {
+.top-nav ul li a:hover {
   background-color: #2a2aa0; /* DeMolay Blue */
-  color: white;
+  color: #fff;
 }
 
-/* === HEADER IMAGE === */
-.hero-image-only {
-  width: 100%;
-  margin: 0 auto;
-  background-color: black; /* fallback background */
-  padding: 0;
-}
-
-.hero-banner {
+/* Header Image */
+.header-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* === INTRO SECTION === */
-.intro {
-  background: #ffffff;
-  padding: 30px 20px;
-  border-radius: 12px;
+/* Welcome Section */
+.welcome-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.welcome-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.welcome-section h2 {
+  color: #b30838;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.welcome-section a {
+  color: #b30838;
+  text-decoration: underline;
+}
+
+.welcome-section a:hover {
+  color: #2a2aa0;
+}
+
+/* Recurring Activities Section */
+.activities-section {
+  background-color: #ffffff;
+  padding: 50px 20px;
   text-align: center;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  margin-top: 40px;
 }
 
-/* === EVENT GALLERY === */
-#events {
-  margin-top: 40px;
+.activities-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.event-gallery {
+.activities-section h2 {
+  color: #b30838;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.activities-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
-  list-style: none;
-  padding: 0;
 }
 
-.event-gallery img {
-  width: 100%;
+.activity-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  flex: 1 1 250px;
   max-width: 300px;
-  border-radius: 8px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.event-gallery img:hover {
-  transform: scale(1.03);
+.activity-card:hover {
+  transform: translateY(-5px);
 }
 
-/* === FOOTER === */
-.gray-footer {
+.activity-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.activity-card p {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #e0e0e0; /* DeMolay Gray */
   text-align: center;
-  padding: 30px 10px;
-  background-color: #e0e0e0; /* DeMolay light gray */
+  padding: 20px 10px;
+  font-size: 0.95em;
   color: #333;
-}
-
-.gray-footer .footer_img {
-  max-height: 69px;
-  margin-top: 15px;
-}
-
-/* === MOBILE === */
-@media (max-width: 600px) {
-  .top-nav ul {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .top-nav li {
-    margin: 5px 0;
-  }
-
-  .hero-banner {
-    max-width: 100%;
-  }
-
-  .event-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
 }
