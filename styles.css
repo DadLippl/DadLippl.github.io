@@ -182,3 +182,58 @@ h1, h2, h3 {
   font-size: 0.95em;
   color: #333;
 }
+/* About Page (fits with existing styles) */
+.about-page {
+  padding: 40px 20px;
+}
+
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.about-section h2 {
+  color: #b30838;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+/* Two‑column layout */
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+/* Left/right image alignment */
+.about-image.left {
+  order: 0;
+}
+.about-image.right {
+  order: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .two-col {
+    flex-direction: column;
+  }
+  .about-image, .about-text {
+    order: unset;
+  }
+}
