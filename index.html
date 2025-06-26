@@ -11,22 +11,19 @@
 <body>
 
   <!-- Navigation -->
-<nav class="top-nav" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <img src="photos/demolay_crest.svg" alt="DeMolay Crest" />
-    </a>
-    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="road.html">The Road Begins</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="activities.html">Recent Activities</a></li>
-      <li><a href="connect.html">Get Connected</a></li>
-      <li><a href="join.html">How to Join</a></li>
-    </ul>
-  </div>
-</nav>
-
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank" rel="noopener noreferrer">The Road Begins</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Header Image -->
   <header class="header-image">
@@ -41,7 +38,7 @@
         DeMolay is a youth leadership organization for young men aged 12 to 21, built on the values of honor, service, and brotherhood. Through mentorship, ritual, and teamwork, members grow into confident, capable leaders — supported by dedicated adult volunteers and a time-tested program that builds character and community.
       </p>
       <p>
-        This website is here to help families and prospective members learn more about our local Vancouver Chapter. Whether you're curious about what DeMolay offers, looking for upcoming activities, or ready to get involved, we’re here to help. We invite you to explore, learn more about our program, and <a href="connect.html">contact us</a> with any questions.
+        This website is here to help families and prospective members learn more about our local Vancouver Chapter. Whether you're curious about what DeMolay offers, looking for upcoming activities, or ready to get involved, we’re here to help. We invite you to explore, learn more about our program, and <a href="contact.html">contact us</a> with any questions.
       </p>
     </div>
   </section>
@@ -72,11 +69,11 @@
     <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
   </footer>
 
-  <!-- Simple Script for Hamburger Toggle -->
   <script>
-    document.getElementById("mobile-menu").addEventListener("click", function () {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("active");
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
     });
   </script>
 
