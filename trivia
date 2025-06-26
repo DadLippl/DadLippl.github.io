@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trivia Challenge - Vancouver DeMolay</title>
+  <link rel="icon" type="image/svg+xml" href="logo/demolay_browser_icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .quiz-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fdfdfd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+    }
+
+    .options button {
+      display: block;
+      margin: 5px 0;
+      padding: 10px 15px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eee;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .options button:hover {
+      background-color: #ddd;
+    }
+
+    .correct {
+      background-color: #c8e6c9 !important;
+      border-color: #4caf50;
+      color: #2e7d32;
+    }
+
+    .incorrect {
+      background-color: #ffcdd2 !important;
+      border-color: #f44336;
+      color: #b71c1c;
+    }
+
+    .disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #b30838;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank">The Road Begins</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+<li><a href="trivia.html">Trivia!</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>Trivia Challenge</h1>
+  <div class="quiz-container" id="quiz"></div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    const questions = [
+      {
+        text: "DeMolay is for young men between the ages of 12 and 21.",
+        options: ["True", "False"],
+        answer: "True"
+      },
+      {
+        text: "Frank S. Land founded the Order of DeMolay in 1919.",
+        options: ["True", "False"],
+        answer: "True"
+      },
+      {
+        text: "The Squires program is designed for boys aged 14 and up.",
+        options: ["True", "False"],
+        answer: "False"
+      },
+      {
+        text: "One of DeMolay’s core values is Courtesy.",
+        options: ["True", "False"],
+        answer: "True"
+      },
+      {
+        text: "DeMolay has no adult mentors.",
+        options: ["True", "False"],
+        answer: "False"
+      }
+    ];
+
+    const quizContainer = document.getElementById('quiz');
+
+    questions.forEach((q, index) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'question';
+
+      const questionTitle = document.createElement('h3');
+      questionTitle.textContent = `Q${index + 1}. ${q.text}`;
+
+      const optionsDiv = document.createElement('div');
+      optionsDiv.className = 'options';
+
+      q.options.forEach(option => {
+        const btn = document.createElement('button');
+        btn.textContent = option;
+        btn.addEventListener('click', () => {
+          const buttons = optionsDiv.querySelectorAll('button');
+          buttons.forEach(b => b.classList.add('disabled'));
+
+          if (option === q.answer) {
+            btn.classList.add('correct');
+          } else {
+            btn.classList.add('incorrect');
+            buttons.forEach(b => {
+              if (b.textContent === q.answer) {
+                b.classList.add('correct');
+              }
+            });
+          }
+        });
+        optionsDiv.appendChild(btn);
+      });
+
+      questionDiv.appendChild(questionTitle);
+      questionDiv.appendChild(optionsDiv);
+      quizContainer.appendChild(questionDiv);
+    });
+  </script>
+
+</body>
+</html>
