@@ -2,26 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us – Vancouver DeMolay</title>
+  <link rel="icon" type="image/svg+xml" href="logo/demolay_browser_icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
+  <!-- Navigation -->
   <nav class="top-nav" aria-label="Main navigation">
-    <ul>
-      <li><a href="road.html">The Road Begins</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="activities.html">Recent Activities</a></li>
-      <li><a href="connect.html">Get Connected</a></li>
-      <li><a href="join.html">How to Join</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="road.html">The Road Begins</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="activities.html">Recent Activities</a></li>
+        <li><a href="connect.html">Get Connected</a></li>
+        <li><a href="join.html">How to Join</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main class="page-content">
-    <h1>About Us</h1>
-  </main>
+  <main class="about-page">
 
+    <!-- Section 1: Vancouver Chapter History -->
+    <section class="about-section">
+      <h2>Our Vancouver Chapter</h2>
+      <p>
+        Founded in 1922, the Vancouver DeMolay Chapter has faithfully served young men in the community for over a century. From its early days at the historic NorthBank Masonic Lodge to today, our chapter has been a cornerstone of leadership development and character-building for youth in Southwest Washington.
+      </p>
+    </section>
+
+    <!-- Section 2: DeMolay Program (image left) -->
+    <section class="about-section two-col">
+      <img src="photos/your_demolay_program.jpg" alt="DeMolay members in ceremony" class="about-image left" />
+      <div class="about-text">
+        <h2>The DeMolay Program</h2>
+        <p>
+          DeMolay is a well-established youth leadership program for ages 12–21, emphasizing the values of honor, service, and brotherhood. Through ritual practices, community service, and public speaking opportunities, our members learn to become confident, morally guided leaders who make a positive impact in their communities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: Squires Program (image right) -->
+    <section class="about-section two-col">
+      <div class="about-text">
+        <h2>The Squires Program</h2>
+        <p>
+          Established in Vancouver in 1997, our chapter proudly launched the first-ever Squires Manor under the leadership of Dad Edgar Trefts. Designed for boys aged 9–11, this program focuses on Wisdom, Truth, and Justice—offering age-appropriate training in character, teamwork, and civic responsibility as a prelude to DeMolay membership.
+        </p>
+      </div>
+      <img src="photos/your_squires_program.jpg" alt="Squires gathering" class="about-image right" />
+    </section>
+
+    <!-- Section 4: Mentors (image left) -->
+    <section class="about-section two-col">
+      <img src="photos/your_mentors.jpg" alt="DeMolay mentors" class="about-image left" />
+      <div class="about-text">
+        <h2>Our Mentors</h2>
+        <p>
+          Our adult volunteers—advisors, dads, and chapter chairmen—bring expertise, care, and guidance to the program. They work closely with our members at every step, fostering character development through mentoring, leadership coaching, and support during chapter activities and community events.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Meeting Location (image right) -->
+    <section class="about-section two-col">
+      <div class="about-text">
+        <h2>Where We Meet</h2>
+        <p>
+          Join us at the NorthBank Masonic Lodge in Washougal, WA (just across the river from Vancouver) on 1st and 3rd Wednesdays at 7:00 PM. Parking and accessibility are easy, and all prospective members and families are welcome to visit, ask questions, and join us for a meeting.
+        </p>
+      </div>
+      <img src="photos/your_meeting_location.jpg" alt="NorthBank Masonic Lodge" class="about-image right" />
+    </section>
+
+  </main>
 </body>
 </html>
