@@ -37,6 +37,17 @@ img {
 }
 
 
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
 .nav-container {
   display: flex;
   align-items: center;
