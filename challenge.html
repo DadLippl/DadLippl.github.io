@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Page Challenge</title>
+  <link rel="icon" type="image/svg+xml" href="logo/demolay_browser_icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank" rel="noopener noreferrer">The Road Begins</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Image -->
+  <header class="header-image">
+    <img src="logo/Vancouver Chapter (6).png" alt="Vancouver DeMolay Chapter" />
+  </header>
+
+  <!-- Visible Content -->
+  <section class="welcome-section">
+    <div class="welcome-container">
+      <h2>Web Page Challenge</h2>
+      <p>Think like a developer. Look deeper.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+  </footer>
+
+  <!-- 
+  🕵️ SECRET CHALLENGE INSTRUCTIONS 🕵️
+
+  Welcome to the Web Page Challenge!
+
+  Your mission: Create your own web page using just a plain text editor and your imagination.
+
+  💡 This is a secret challenge — only those who "inspect the page source" will find these instructions!
+
+  ======================
+  STEP-BY-STEP INSTRUCTIONS
+  ======================
+
+  🪟 FOR WINDOWS USERS:
+
+  1. Open Notepad:
+     - Click the Start button or press the Windows key
+     - Type "Notepad"
+     - Click the Notepad app to open it
+
+  2. Copy and paste this code into Notepad:
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>My First Web Page</title>
+    </head>
+    <body>
+      <h1>Hello, world!</h1>
+      <p>This is my first web page.</p>
+    </body>
+  </html>
+
+  3. Save the file:
+     - Click "File" > "Save As..."
+     - Choose "All Files" under "Save as type"
+     - Name the file: my_webpage.html
+     - Click "Save" (save it to your Desktop)
+
+  4. Open the file in a browser:
+     - Find your file on the Desktop
+     - Double-click it — it opens in your browser
+
+  5. To edit the file again later:
+     - Right-click the file
+     - Choose "Open with..." > Notepad
+     - Make changes, then save again
+
+  🍏 FOR MAC USERS:
+
+  1. Open TextEdit
+     - Press Command + Spacebar
+     - Type "TextEdit" and press Enter
+
+  2. Change format to plain text:
+     - Click "Format" > "Make Plain Text"
+
+  3. Paste the HTML code (see above)
+
+  4. Save the file:
+     - Click "File" > "Save"
+     - Name the file: my_webpage.html
+     - Uncheck "If no extension is provided, use .txt"
+     - Click "Save"
+
+  5. Open in browser: find the file in Finder and double-click
+
+  6. To edit again:
+     - Right-click the file
+     - Choose "Open With" > TextEdit
+
+  ======================
+  OPTIONAL: USE CHATGPT OR AN AI FRIEND
+  ======================
+
+  Try this prompt in ChatGPT:
+
+  "I'm learning how to create a basic HTML page. Can you help me write one with a title, a few headings, a paragraph, and an image?"
+
+  You can even ask:
+  - “How do I add a background color?”
+  - “How do I make text centered?”
+  - “How can I make my name appear in big letters?”
+
+  ======================
+  FINAL STEP
+  ======================
+
+  ✅ When you're done:
+  - Send your `.html` file to your Chapter Advisor on Discord.
+  - Entries will be shared at the next Chapter Meeting!
+
+  Be creative. Try something fun. Learn something new.
+  -->
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
