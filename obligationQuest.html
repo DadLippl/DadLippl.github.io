@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obligation Quest</title>
+  <style>
+    body {
+      font-family: 'comic sans', sans-serif;
+      background: #f4f4f9;
+      color: #222;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #001f4d; /* Navy Blue */
+    }
+    .game-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #001f4d; /* Navy Blue */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    #feedback {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    #progress {
+      margin-top: 1rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #003366;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    #hint {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-box">
+    <h1>🛡️ Obligation Quest</h1>
+    <p id="linePrompt">Line 1: Memorize and type.</p>
+    <input id="userInput" placeholder="Type the line..." />
+    <div>
+      <button onclick="checkAnswer()">Submit</button>
+      <button onclick="playAudio()">🔊 Play Line</button>
+      <button onclick="showHint()">💡 Show Hint</button>
+    </div>
+    <p id="hint"></p>
+    <p id="feedback"></p>
+    <p id="progress">Progress: 0 / <span id="totalLines"></span></p>
+    <div id="badgeArea"></div>
+  </div>
+
+  <script>
+    const lines = [
+      "I promise to uphold the teachings of DeMolay",
+      "To be loyal to my country",
+      "To honor my parents",
+      "To respect and love my fellow man",
+      "To seek truth and practice it",
+      "To be faithful to every trust",
+      "To serve God",
+      "To always strive to be a better person"
+    ];
+
+    let currentLine = 0;
+    let xp = 0;
+
+    document.getElementById("totalLines").textContent = lines.length;
+
+    function checkAnswer() {
+      const input = document.getElementById("userInput").value.trim();
+      const feedback = document.getElementById("feedback");
+      const badgeArea = document.getElementById("badgeArea");
+      const hint = document.getElementById("hint");
+
+      if (input === lines[currentLine]) {
+        feedback.textContent = "✅ Correct!";
+        xp += 10;
+        currentLine++;
+        document.getElementById("userInput").value = "";
+        document.getElementById("progress").textContent = `Progress: ${currentLine} / ${lines.length}`;
+        hint.textContent = "";
+
+        if (currentLine === lines.length) {
+          feedback.textContent = "🎉 You’ve completed the obligation!";
+          badgeArea.innerHTML = `<div class="badge">🏅 DeMolay Master</div>`;
+          document.getElementById("linePrompt").textContent = "";
+        } else {
+          document.getElementById("linePrompt").textContent = `Line ${currentLine + 1}: Memorize and type the following:`;
+        }
+      } else {
+        feedback.textContent = "❌ Try again or use a hint.";
+      }
+    }
+
+    function playAudio() {
+      const utterance = new SpeechSynthesisUtterance(lines[currentLine]);
+      utterance.rate = 0.9;
+      speechSynthesis.speak(utterance);
+    }
+
+    function showHint() {
+      const words = lines[currentLine].split(" ");
+      const firstLetters = words.map(word => word[0]).join(" ");
+      document.getElementById("hint").textContent = `Hint: ${firstLetters}`;
+    }
+  </script>
+</body>
+</html>
