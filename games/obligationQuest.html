@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obligation Quest</title>
+  <link rel="stylesheet" href="obligationQuest.css" />
+
+</head>
+<body>
+
+  <!-- Game Content -->
+  <div class="game-box">
+    <h1>🛡️ Obligation Quest</h1>
+    <a href="../index.html" class="nav-logo" aria-label="Home">
+      <img src="../photos/demolay_crest.svg" alt="DeMolay Crest" />
+    </a>
+    <p id="lineReveal"></p>
+
+    <p id="linePrompt">Memorize and type the Line:</p>
+    <input id="userInput" placeholder="Type the line..." />
+    <div>
+      <button onclick="checkAnswer()">Submit</button>
+      <button onclick="playAudio()">🔊 Play Line</button>
+     
+      <button onclick="seeLine()">👁️ See Line</button>
+
+    </div>
+    <p id="hint"></p>
+    <p id="feedback"></p>
+    <p id="progress">Progress: 0 / <span id="totalLines"></span></p>
+    <div id="badgeArea"></div>
+    <div id="congratsMessage">🎉 CONGRATULATIONS! 🎉</div>
+    <button id="restartBtn" onclick="restartGame()">🔁 Restart Game</button>
+  </div>
+  <script src="obligationQuest.js"></script>
+</body>
+</html>

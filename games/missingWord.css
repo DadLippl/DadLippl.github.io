@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1B365F; /* Oxford Blue Shade */
+  color: #FFCF00; /* Crown Gold Primary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #1E4488; /* Oxford Blue Primary */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #EAAB00; /* Crown Gold Shade */
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+#reference {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #FFCF00;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1B365F;
+}
+
+button:hover {
+  background-color: #EAAB00;
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.nav-logo img {
+  height: 75px;
+}
