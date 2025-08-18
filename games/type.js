@@ -40,6 +40,26 @@ input.addEventListener("input", () => {
     feedback.textContent = "Keep trying...";
   }
 });
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const userInput = input.value.trim();
+    const currentLine = lines[currentIndex];
+
+    if (userInput.toLowerCase() === currentLine.toLowerCase()) {
+      document.getElementById(`line-${currentIndex}`).classList.add("correct");
+      currentIndex++;
+      input.value = "";
+      feedback.textContent = "Nice! Keep going.";
+
+      if (currentIndex === lines.length) {
+        feedback.textContent = "🎉 You did it!";
+        launchConfetti();
+      }
+    } else {
+      feedback.textContent = "Keep trying...";
+    }
+  }
+});
 
 // 🎉 Confetti animation
 function launchConfetti() {

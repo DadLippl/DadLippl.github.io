@@ -542,3 +542,400 @@ font-family: 'Roboto', sans-serif;
   margin-bottom: 0.5rem;
   padding: 0;
 }
+/* Dress Code: container and headings */
+/* Import Roboto from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Global font settings */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Headings stay in Roboto by default */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation styling assumed from your existing site styles */
+
+/* Dress Code: container and headings */
+main.container article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main.container article h1 {
+  color: #b30838; /* DeMolay Red */
+  margin-bottom: 0.75rem;
+}
+
+main.container article h4 {
+  color: #002147; /* Oxford Blue */
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 70ch;
+  margin: 0.5rem auto 2rem;
+}
+
+/* Section headings */
+main.container article section h3 {
+  color: #b30838;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem;
+}
+
+/* Separator */
+main.container article hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #f9d423, transparent); /* Crown Gold */
+  margin: 2rem 0;
+}
+
+/* Card-style top-level lists inside each section */
+main.container article section > ol {
+  list-style: none;            /* remove default markers */
+  padding-left: 0;
+  margin: 1rem 0 1.5rem;
+  counter-reset: alpha;        /* prepare for optional A/B/C markers */
+}
+
+main.container article section > ol > li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #002147;         /* Oxford Blue */
+  color: #ffffff;
+  border-left: 6px solid #f9d423; /* Crown Gold accent */
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main.container article section > ol > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Alpha badge (A, B, C...) for each item — playful font here */
+main.container article section > ol > li::before {
+  counter-increment: alpha;
+  content: counter(alpha, upper-alpha);
+  flex: 0 0 auto;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  background: #f9d423;        /* Gold badge */
+  color: #002147;             /* Blue text for contrast */
+  font-weight: 700;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  margin-top: 0.1rem;
+}
+
+/* Paragraph notes under lists (e.g., "Optional items") */
+main.container article section > p {
+  background: #ffffff;
+  color: #333;
+  border-left: 4px solid #2a2aa0; /* DeMolay Blue accent */
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Casual section sub-cards */
+main.container article #casual > div {
+  background: #ffffff;
+  border: 1px solid #2a2aa0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+main.container article #casual > div h4 {
+  color: #002147;
+  margin: 0 0 0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card-style lists inside the casual sub-cards */
+main.container article #casual > div > ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+  counter-reset: alpha;
+}
+
+main.container article #casual > div > ol > li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #002147;
+  color: #ffffff;
+  border-left: 6px solid #f9d423;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main.container article #casual > div > ol > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+main.container article #casual > div > ol > li::before {
+  counter-increment: alpha;
+  content: counter(alpha, upper-alpha);
+  flex: 0 0 auto;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  background: #f9d423;
+  color: #002147;
+  font-weight: 700;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  margin-top: 0.05rem;
+}
+
+/* Accessibility: ensure links inside cards remain readable */
+main.container article section a {
+  color: #f9d423;
+  text-decoration: underline;
+}
+
+main.container article section a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* ===== Now You Are a DeMolay – Matching Dress Code Styling ===== */
+
+/* Base layout for the content area */
+#content .section {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+}
+
+/* Section headings */
+#content .section h2 {
+  color: #b30838; /* DeMolay Red */
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+#content .section h3 {
+  color: #002147; /* Oxford Blue */
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph spacing */
+#content .section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Top‑level UL lists (like dress-code, code-of-ethics, core-values) */
+#content .section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+  counter-reset: alpha; /* For optional badges */
+}
+
+#content .section ul > li {
+  position: relative;
+  background: #002147; /* Oxford Blue */
+  color: #ffffff;
+  border-left: 6px solid #f9d423; /* Crown Gold accent */
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#content .section ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Alpha badge for certain ordered concepts (playful Comic Sans) */
+#content .section ul.code-of-ethics > li::before,
+#content .section ul.core-values > li::before,
+#content .section ul.dress-code > li::before {
+  counter-increment: alpha;
+  content: counter(alpha, upper-alpha);
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  background: #f9d423;
+  color: #002147;
+  font-weight: 700;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+/* Nested lists inside cards */
+#content .section ul > li ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 0.5rem;
+}
+
+#content .section ul > li ul li {
+  background: none;
+  color: #ffffff;
+  border: none;
+  padding: 0;
+  margin: 0.25rem 0;
+  box-shadow: none;
+}
+
+/* Tip or callout paragraphs */
+#content .section p strong {
+  color: #f9d423;
+}
+
+/* Hero intro at the top */
+.new-member-hero {
+  background-color: #002147; /* Oxford Blue */
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 5px solid #f9d423;
+}
+
+.new-member-hero h1 {
+  margin-bottom: 1rem;
+}
+
+.new-member-hero p {
+  max-width: 60ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Smooth separation between sections */
+#content .section + .section {
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+}
+
+/* ===== Observance Days – Match New Member Card Styling ===== */
+
+.obligatory-days {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #002147; /* Oxford Blue */
+}
+
+/* Main heading */
+.obligatory-days h1 {
+  color: #b30838; /* DeMolay Red */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Intro text */
+.obligatory-days p {
+  max-width: 60ch;
+  margin: 0 auto 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Individual day “cards” */
+.ob-day {
+  background: #002147; /* Oxford Blue */
+  color: #ffffff;
+  border-left: 6px solid #f9d423; /* Crown Gold */
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ob-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.ob-day h2 {
+  margin-bottom: 0.5rem;
+  color: #f9d423; /* Crown Gold */
+  font-size: 1.5rem;
+}
+
+.ob-day p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* If your days are in a list format, add playful badges */
+.ob-days-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem auto;
+  max-width: 800px;
+  counter-reset: day;
+}
+
+.ob-days-list li {
+  counter-increment: day;
+  position: relative;
+  background: #002147;
+  color: #ffffff;
+  border-left: 6px solid #f9d423;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.ob-days-list li::before {
+  content: counter(day);
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  background: #f9d423;
+  color: #002147;
+  font-weight: 700;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
