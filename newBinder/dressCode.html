@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+
+  <title>Dress Code</title>
+<link rel="stylesheet" href="../styles.css" />
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank" rel="noopener noreferrer">The Road Begins</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+
+  <li class="dropdown">
+    <button class="dropbtn">Games</button>
+    <div class="dropdown-content">
+      <a href="../games/obligationQuest.html">Obligation Quest Game</a>
+      <a href="../games/missingWord.html">Missing Words</a>
+      <a href="../games/type.css">Typing</a>
+    </div>
+  </li>
+
+        <li><a href="../trivia.html">Trivia!</a></li>
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <article>
+
+        <h1>Dress Code</h1>
+        <h4>
+          Remember that you represent one of the finest youth organizations in the world.
+          You are always our “Public Relations” ambassador and a role model to newer members.
+          Appropriate attire expects appropriate respect.
+        </h4>
+
+      <section id="formal">
+        <h3>Section 1. Formal *: ****</h3>
+        <ol type="A">
+          <li>Tuxedo or dark suit (dress jacket required)</li>
+          <li>Dark dress slacks</li>
+          <li>Tux or white dress shirt and tie</li>
+          <li>Leather belt, dress suspenders, polished dress shoes, and dress socks</li>
+          <li>Honors/Awards as desired and appropriate for the occasion</li>
+        </ol>
+        <p>Optional items: cummerbund or vest</p>
+      </section>
+
+      <hr>
+
+      <section id="professional">
+        <h3>Section 2. Professional Business with Tie ****</h3>
+        <ol type="A">
+          <li>Suit, dress jacket, coat, sweater, or vest</li>
+          <li>Dress slacks, dress shirt, and tie</li>
+          <li>Dress shoes, dress belt, and dress socks</li>
+          <li>Honors/Awards as desired and appropriate for the occasion</li>
+        </ol>
+      </section>
+
+      <hr>
+
+      <section id="smart-business">
+        <h3>Section 3. Smart Business – Open Collar without Tie ***</h3>
+        <ol type="A">
+          <li>Solid color dress slacks/pants, cotton pants, khakis, or very nice jeans</li>
+          <li>Collared button-up shirt or polo – open collar, no neckwear (tie)</li>
+          <li>Dress or casual shoes, belt; socks or sockless as acceptable</li>
+          <li>No athletic shoes, tennis, running, open-toe, sandals, slippers, or crocs</li>
+          <li>Honors/Awards as desired and appropriate for the occasion</li>
+        </ol>
+        <p>Optional items: dress coat or jacket, casual sweater, or vest</p>
+      </section>
+
+      <hr>
+
+      <section id="casual">
+        <h3>Section 4. Casual</h3>
+
+        <div>
+          <h4>Part A. DeMolay Washington Casual</h4>
+          <p>More stylish and upscale than Sporting.</p>
+          <ol type="A">
+            <li>Casual pants, nice jeans, or appropriate casual shorts (no athletic shorts or joggers)</li>
+            <li>DeMolay shirt (features “DeMolay” or a DeMolay logo/emblem)</li>
+            <li>Casual shoes, sneakers, athletic shoes (no open-toe); and appropriate socks</li>
+          </ol>
+        </div>
+
+        <div>
+          <h4>Part B. Sporting / Ultra Casual *</h4>
+          <ol type="A">
+            <li>Jeans, shorts (casual or athletic), joggers or sweats</li>
+            <li>T-shirts, sweatshirts, jerseys, tank-tops</li>
+            <li>Athletic shoes, slides, sandals, crocs; and socks as appropriate</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr>
+
+      <footer class="footer">
+
+         <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+      </footer>
+
+    </article>
+  </main>
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

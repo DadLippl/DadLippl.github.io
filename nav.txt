@@ -1,0 +1,18 @@
+   
+
+
+  <nav class="top-nav" aria-label="Main navigation"></nav>
+  
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank" rel="noopener noreferrer">The Road Begins</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="trivia.html">Trivia!</a></li>
+      </ul>
+    </div>
+  </nav>
