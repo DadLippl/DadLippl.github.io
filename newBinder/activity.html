@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vancouver DeMolay Chapter – PDF Downloads</title>
+  <link rel="icon" type="image/svg+xml" href="../logo/demolay_browser_icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    /* Layout for the two PDF previews */
+    .pdf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .pdf-grid { grid-template-columns: 1fr; }
+    }
+
+    .pdf-card.ob-day { padding: 1rem; }
+    .pdf-title { margin: 0 0 0.5rem; color: #f9d423; }
+
+    .pdf-preview {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border: 1px solid #2a2aa0;
+      height: 60vh;           /* responsive height */
+      min-height: 360px;      /* sensible minimum */
+      max-height: 720px;      /* avoid excessive tall embeds */
+    }
+
+    /* Keep the preview fully scrollable and interactive */
+    .pdf-preview object,
+    .pdf-preview iframe,
+    .pdf-preview embed {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Floating download badge — visible, non-intrusive CTA */
+    .download-badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: #FFCF00;
+      color: #1B365F;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid #EAAB00;
+      box-shadow: 0 0 10px #EAAB00;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.9rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .download-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #FFCF00;
+    }
+
+    .pdf-meta {
+      margin-top: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .pdf-caption {
+      margin: 0;
+      color: #ffffff;
+      opacity: 0.95;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../photos/demolay_crest.svg" alt="DeMolay Crest" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://beademolay.org/" target="_blank" rel="noopener noreferrer">The Road Begins</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+
+        <li class="dropdown">
+          <button class="dropbtn">Games</button>
+          <div class="dropdown-content">
+            <a href="../games/obligationQuest.html">Obligation Quest Game</a>
+            <a href="../games/missingWord.html">Missing Words</a>
+            <a href="../games/type.html">Typing</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <button class="dropbtn">New Member</button>
+          <div class="dropdown-content">
+            <a href="nowaDemolay.html">Now You are a DeMolay</a>
+            <a href="dressCode.html">Dress Code</a>
+            <a href="observance.html">Observance Days</a>
+            <a href="common-questions.html">Common Questions</a>
+            <a href="activity.html">Activitiy Planning</a>
+          </div>
+        </li>
+
+         <li><a href="../trivia.html">Trivia!</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="content" class="content" tabindex="-1">
+    <section class="section">
+      <h2>Printable resources</h2>
+      <p style="text-align:center; max-width: 60ch; margin: 0.25rem auto 1.5rem;">
+        Scroll through each preview. Click the floating Download button on the preview or use the button below.
+      </p>
+
+      <div class="pdf-grid">
+
+        <!-- PDF 1 -->
+        <article class="ob-day pdf-card" aria-labelledby="pdf1-title">
+          <h3 id="pdf1-title" class="pdf-title">Activity Planner</h3>
+
+          <div class="pdf-preview">
+            <!-- Floating download badge -->
+            <a
+              class="download-badge"
+              href="../Files/Activity-Planner.pdf"
+              download
+              aria-label="Download Activity Planner PDF"
+              title="Download Obligatory Days PDF"
+            >Download</a>
+
+            <object
+              data="../Files/Activity-Planner.pdf"
+              type="application/pdf"
+              aria-label="Preview of Obligatory Days PDF"
+            >
+              <p style="padding:1rem;">
+                Your browser can’t display this PDF. You can
+                <a href="../Files/Activity-Planner.pdf" download>download it here</a>.
+              </p>
+            </object>
+          </div>
+
+          <div class="pdf-meta">
+            <p class="pdf-caption">A quick-reference handout to plan Activities.</p>
+            <a class="download-button" href="../Files/Activity-Planner.pdf" download>Download PDF</a>
+          </div>
+        </article>
+
+        <!-- PDF 2 -->
+        <article class="ob-day pdf-card" aria-labelledby="pdf2-title">
+          <h3 id="pdf2-title" class="pdf-title">Event Planning</h3>
+
+          <div class="pdf-preview">
+            <!-- Floating download badge -->
+            <a
+              class="download-badge"
+              href=""
+              download
+              aria-label="Download Dress Code PDF"
+              title="Download Dress Code PDF"
+            >Download</a>
+
+            <object
+              data="../Files/event_planning_guide.pdf#view=FitH"
+              type="application/pdf"
+              aria-label="Preview of Dress Code PDF"
+            >
+              <p style="padding:1rem;">
+                Your browser can’t display this PDF. You can
+                <a href="../Files/event_planning_guide.pdf" download>download it here</a>.
+              </p>
+            </object>
+          </div>
+
+          <div class="pdf-meta">
+            <p class="pdf-caption">What to wear for events, meetings, and ceremonies.</p>
+            <a class="download-button" href="../Files/event_planning_guide.pdf" download>Download PDF</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('active');
+    });
+    menuToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        menuToggle.click();
+      }
+    });
+
+    // Optional: also trigger download if user clicks the preview background area (outside PDF controls)
+    document.querySelectorAll('.pdf-card').forEach(card => {
+      const link = card.querySelector('.download-badge');
+      const preview = card.querySelector('.pdf-preview');
+      preview.addEventListener('click', (e) => {
+        // If the click wasn't on the badge and wasn't on a link, trigger download
+        if (!(e.target.closest && e.target.closest('.download-badge'))) {
+          link.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+```
