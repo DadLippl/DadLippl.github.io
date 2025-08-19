@@ -958,3 +958,20 @@ main.container article section a:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #FFCF00;
 }
+
+.meeting-columns {
+  display: flex;
+  gap: 2rem; /* Adds space between columns */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.meeting-columns p {
+  flex: 1 1 300px;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: #002147;
+  color: white;
+  border-left: 6px solid #f9d423;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
