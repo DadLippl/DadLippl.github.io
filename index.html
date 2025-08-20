@@ -67,21 +67,43 @@
   </section>
 
 <!---Section is for photos/ activity plans-->
-  <section class = "container">
-    <div class = "slider-wrapper">
-      <div class = "slider">
-          <img id = "slide-1" src="photos/main_page_1wed.svg" alt="First Wednesday Activity">
-          <img id = "slide-2"src="photos/main_page_3wed.svg" alt="Third Wednesday Activity">
-          <img id = "slide-3"src="photos/main_page_state.svg" alt="State Events">
-      </div>
-      <div class="slider-nav">
-      <a href ="#slide-1"></a>
-      <a href ="#slide-2"></a>
-      <a href ="#slide-3"></a>
-      </div>
-    
+<!-- Slider Wrapper -->
+<div class="slider">
+    <!-- Calendar Slide FIRST -->
+    <div id="calendar-slide" class="calendar-slide">
+        <div class="calendar-container">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=5sdorkph0ci87qs0ed8n7vt5sk%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                style="border:0;"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+        </div>
     </div>
-  </section>
+
+    <!-- Activity Images -->
+    <img id="slide-1" src="photos/main_page_1wed.svg" alt="First Wednesday Activity">
+    <img id="slide-2" src="photos/main_page_3wed.svg" alt="Third Wednesday Activity">
+    <img id="slide-3" src="photos/main_page_state.svg" alt="State Events">
+</div>
+
+<div class="slider-nav">
+    <a href="#calendar-slide"></a>
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+</div>
+
+<div class="slider-nav">
+      <a href="#calendar-slide"></a>
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+    <a href="#calendar-slide"></a>
+</div>
+
+
+
   <!-- Recurring Activities Section -->
  <!--- <section class="activities-section">
     <div class="activities-container">
@@ -103,6 +125,7 @@
     </div>
   </section>
 --->
+
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Vancouver DeMolay Chapter. All rights reserved.</p>

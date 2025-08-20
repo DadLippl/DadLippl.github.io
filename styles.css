@@ -342,7 +342,9 @@ form button:hover {
 
 .slider-wrapper{
   position: relative;
-  max-width: 70%;
+  height: 33.333vh; /* one-third of the viewport height */
+  overflow: hidden;
+ 
   margin: 0 auto;
 }
 
@@ -350,17 +352,55 @@ form button:hover {
   display: flex;
   aspect-ratio: 7/6.5;
   overflow-x: auto;
+  height: 100%;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0325);
   border-radius: 0.5rem;
+   object-fit: cover;
 }
 
 .slider img{
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: contain;
+  height: 100%;
   /*object-fit: cover;*/
+}
+.calendar-slide {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  background-color: #002147; /* Oxford Blue backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.calendar-container {
+  position: relative;
+  height: 100%;
+
+  width: 100%;
+  max-width: 800px; /* same width as your original iframe */
+  aspect-ratio: 3 / 3; /* keeps proportions */
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 3px solid #f9d423; /* Crown Gold frame */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  background-color: #fff;
+  margin: 1em;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .calendar-container {
+    aspect-ratio: 3 / 4; /* taller for phones */
+  }
 }
 
 .slider-nav{
