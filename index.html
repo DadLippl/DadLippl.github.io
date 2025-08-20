@@ -102,6 +102,20 @@
     <a href="#calendar-slide"></a>
 </div>
 
+<script>
+  const slider = document.querySelector('.slider');
+  const slideWidth = slider.offsetWidth;
+  const totalSlides = slider.querySelectorAll('img').length;
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slider.scrollTo({
+      left: slideWidth * currentIndex,
+      behavior: 'smooth'
+    });
+  }, 15000);
+</script>
 
 
   <!-- Recurring Activities Section -->
