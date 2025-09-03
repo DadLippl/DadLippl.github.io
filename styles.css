@@ -242,8 +242,8 @@ border-radius: 7px;}
 }
 
 .activity-card img {
-  width: 100%;
-  height: auto;
+  width: 75vw;
+  height: 50vh;
   border-radius: 6px;
   margin-bottom: 15px;
 }
