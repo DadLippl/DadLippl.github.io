@@ -107,7 +107,8 @@
 <script>
   const slider = document.querySelector('.slider');
   const slideWidth = slider.offsetWidth;
-  const totalSlides = slider.querySelectorAll('img').length;
+  const totalSlides = slider.querySelectorAll('.calendar-slide, img').length;
+
   let currentIndex = 0;
 
   setInterval(() => {
